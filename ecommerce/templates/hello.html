@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+</head>
+<body>
+    <h1>pagal hai kya.....</h1>
+    <h4>value of x is : {{100}}</h4>
+    <h4>value of y is : {{50}}</h4>
+    {% comment %}
+    {% if x > y and x > z %}
+        <h3>{{x}} is greater</h3>
+    {% elif y > x and  y > z  %}
+        <h3>{{y}} is greater</h3>
+    {% else %}
+        <h3>{{z}} is greater</h3>
+
+    {% endif %}
+
+    {% for i in l %}
+        {{i}}
+    
+    {% endfor %}
+    {% endcomment %}
+
+
+    {% for i in l %}
+        {{forloop.counter}}.{{i}}
+    {% endfor %}
+    
+    {% for i in product %}
+        <h1>Id : {{i.id}} </h1>
+        <h1>product name: {{i.pname}} </h1>
+        <h1>product image: {{i.image}} </h1>
+        <h1>category: {{i.pcat}} </h1>
+        <h1>price: {{i.price}} </h1>
+    {% endfor %}
+
+</body>
+</html>
